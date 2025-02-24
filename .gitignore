@@ -1,0 +1,71 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Maven & Gradle ###
+.mvn/
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Logs & Temp Files ###
+*.log
+hs_err_pid*.log
+.DS_Store
+Thumbs.db
+
+### IDE Specific Files ###
+# STS (Spring Tool Suite)
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+/.metadata/
+/bin/
+/tmp/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+### Ignore dependency caches ###
+/.m2/
+/.gradle/
+
+### Ignore Node.js (if frontend is included) ###
+node_modules/
+dist/
+
+### Ignore environment & property files (Optional) ###
+.env
+spring-boot-devtools.properties
+
+### Ignore Database Files ###
+*.db
+*.sqlite
+
+### Ignore Generated Files ###
+*.class
+*.jar
+*.war
+*.ear
