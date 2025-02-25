@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://dockercompose-demo-sqlserver-1:1433;databaseName=sample;encrypt=false;trustServerCertificate=true;
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: MyStrong@1234
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.SQLServerDialect
+    networks:
+        - dockercompose-demo_default
+    
+
+networks:
+  dockercompose-demo_default:
+       external: true  # This indicates that you are using an already existing network

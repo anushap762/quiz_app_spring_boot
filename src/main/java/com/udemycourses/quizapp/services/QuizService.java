@@ -1,6 +1,7 @@
 package com.udemycourses.quizapp.services;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,6 +42,7 @@ public class QuizService {
 
 	public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(int id) {
 		Optional<Quiz> quiz=quizDao.findById(id);
+		if(quiz.isPresent()) {
 		List<Question> questionsFromDb=quiz.get().getQuestions();
 		List<QuestionWrapper> questionsForUser = new ArrayList<>();
 		for (Question question : questionsFromDb) {
@@ -48,6 +50,10 @@ public class QuizService {
 			questionsForUser.add(qw);
 		}
 		return new ResponseEntity<List<QuestionWrapper>>(questionsForUser,HttpStatus.OK);
+		}
+		else {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.emptyList());
+		}
 	}
 
 	public ResponseEntity<Integer> calculateResult(int id, List<Response> responses) {

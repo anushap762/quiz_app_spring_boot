@@ -54,9 +54,40 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+		 <!-- <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-junit-jupiter</artifactId>
+        <version>3.12.4</version>  Latest stable version of Mockito 
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>3.12.4</version>  Latest stable version of Mockito 
+        <scope>test</scope>
+    </dependency>	
+		<dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.2</version>  Or the latest version 
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.2</version>  Or the latest version 
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-commons</artifactId>
+        <version>1.8.2</version>  Make sure this version matches 
+        <scope>test</scope>
+    </dependency>
+-->	</dependencies>
 
 	<build>
+	<finalName>quizapp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -82,6 +113,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<!--<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M5</version>  Or the latest version 
+            <configuration>
+                <useModulePath>false</useModulePath>  Add this if you are using JDK 9 or later 
+            </configuration>
+        </plugin>-->
 		</plugins>
 	</build>
 
